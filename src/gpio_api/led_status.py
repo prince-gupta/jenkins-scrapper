@@ -3,15 +3,15 @@ from gpiozero import LED
 
 
 class LEDStatus:
-    failed_LED: LED
-    success_LED: LED
-    building_LED: LED
+    failed_LED = LED
+    success_LED = LED
+    building_LED = LED
 
     def __init__(self):
         led_config = (PropertyUtil().get_int("gpio", "pin"))['led']
-        LEDStatus.success_LED = led_config['success']
-        LEDStatus.fail_LED = led_config['failed']
-        LEDStatus.building_LED = led_config['building']
+        LEDStatus.success_LED = LED(led_config['success'])
+        LEDStatus.failed_LED = LED(led_config['failed'])
+        LEDStatus.building_LED = LED(led_config['building'])
 
     def mark_fail(self):
         LEDStatus.failed_LED.on()

@@ -33,7 +33,7 @@ class JobWorkers:
         Converts Job object to String to show metadata of Job
         :return: string
         """
-        job: Jobs = self.get_job_object()
+        job = self.get_job_object()
         string = """ Job Name : %s \n Job Description: %s \n Is Job running: %s \n Is Job enabled: %s""" \
                  % (job.name, job.get_description(), job.is_running(), job.is_enabled())
         return string

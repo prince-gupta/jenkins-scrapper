@@ -8,16 +8,16 @@ from time import sleep
 
 
 class MainWorker:
-    __jenkins_server__: JenkinsServer
-    __job_worker__: JobWorkers
+    jenkins_server = JenkinsServer
+    job_worker =  JobWorkers
 
     def __init__(self):
-        MainWorker.__jenkins_server__ = JenkinsServer().get_server()
-        MainWorker.__job_worker__ = JobWorkers(MainWorker.__jenkins_server__, PropertyUtil().get('core', 'job'))
+        MainWorker.jenkins_server = JenkinsServer().get_server()
+        MainWorker.job_worker = JobWorkers(MainWorker.jenkins_server, PropertyUtil().get('core', 'job'))
 
     def start(self):
         while True:
-            status = MainWorker.__job_worker__.should_raise_alarm()
+            status = MainWorker.job_worker.should_raise_alarm()
             if PropertyUtil().get('core', 'enable_gpio') is True:
                 if status is True:
                     LEDStatus().mark_fail()
