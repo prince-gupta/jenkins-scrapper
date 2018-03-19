@@ -5,7 +5,7 @@ class PropertyUtil:
     cfg_file = None
 
     def __init__(self):
-        with open("src/api.yml", 'r') as y_file:
+        with open("api.yml", 'r') as y_file:
             PropertyUtil.cfg_file = yaml.load(y_file)
 
     def get(self, section, property_name):

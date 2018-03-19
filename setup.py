@@ -1,62 +1,27 @@
 from setuptools import setup
 
+# PyYAML	3.12	3.12
+# certifi	2018.1.18	2018.1.18
+# chardet	3.0.4	3.0.4
+# gpiozero	1.4.1	1.4.1
+# idna	2.6	2.6
+# jenkinsapi	0.3.6	0.3.6
+# jproperties3	0.5.2	0.5.2
+# pip	9.0.1	9.0.2
+# pytz	2018.3	2018.3
+# requests	2.18.4	2.18.4
+# ruamel.appconfig	0.5.3	0.5.3
+# ruamel.std.argparse	0.8.1	0.8.1
+# setuptools	28.8.0	39.0.1
+# six	1.11.0	1.11.0
+# urllib3	1.22	1.22
+
 setup(
     name='jenkins-scrapper',
     version='1.0',
-    packages=['src', 'src.core', 'src.j_api', 'src.gpio_api', 'venv.lib.python3.6.site-packages.idna',
-              'venv.lib.python3.6.site-packages.pytz', 'venv.lib.python3.6.site-packages.yaml',
-              'venv.lib.python3.6.site-packages.ruamel.std.argparse',
-              'venv.lib.python3.6.site-packages.ruamel.std.argparse.action',
-              'venv.lib.python3.6.site-packages.ruamel.appconfig', 'venv.lib.python3.6.site-packages.certifi',
-              'venv.lib.python3.6.site-packages.chardet', 'venv.lib.python3.6.site-packages.chardet.cli',
-              'venv.lib.python3.6.site-packages.urllib3', 'venv.lib.python3.6.site-packages.urllib3.util',
-              'venv.lib.python3.6.site-packages.urllib3.contrib',
-              'venv.lib.python3.6.site-packages.urllib3.contrib._securetransport',
-              'venv.lib.python3.6.site-packages.urllib3.packages',
-              'venv.lib.python3.6.site-packages.urllib3.packages.backports',
-              'venv.lib.python3.6.site-packages.urllib3.packages.ssl_match_hostname',
-              'venv.lib.python3.6.site-packages.gpiozero', 'venv.lib.python3.6.site-packages.gpiozero.pins',
-              'venv.lib.python3.6.site-packages.requests', 'venv.lib.python3.6.site-packages.jenkinsapi',
-              'venv.lib.python3.6.site-packages.jenkinsapi.utils',
-              'venv.lib.python3.6.site-packages.jenkinsapi.command_line',
-              'venv.lib.python3.6.site-packages.gpiozerocli', 'venv.lib.python3.6.site-packages.jenkinsapi_tests',
-              'venv.lib.python3.6.site-packages.jenkinsapi_tests.systests',
-              'venv.lib.python3.6.site-packages.jenkinsapi_tests.unittests',
-              'venv.lib.python3.6.site-packages.jenkinsapi_tests.test_utils',
-              'venv.lib.python3.6.site-packages.jenkinsapi_utils',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip.req',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip.vcs',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip.utils',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip.compat',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip.models',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.distlib',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.distlib._backport',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.colorama',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.html5lib',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.html5lib._trie',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.html5lib.filters',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.html5lib.treewalkers',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.html5lib.treeadapters',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.html5lib.treebuilders',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.lockfile',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.progress',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.requests',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.requests.packages',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.requests.packages.chardet',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.requests.packages.urllib3',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.requests.packages.urllib3.util',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.requests.packages.urllib3.contrib',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.requests.packages.urllib3.packages',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.packaging',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.cachecontrol',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.cachecontrol.caches',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.webencodings',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip._vendor.pkg_resources',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip.commands',
-              'venv.lib.python3.6.site-packages.pip-9.0.1-py3.6.egg.pip.operations'],
+    packages=['src', 'src.core', 'src.j_api', 'src.gpio_api', 'PyYAML', 'certifi', 'chardet', 'gpiozero', 'idna',
+              'jenkinsapi', 'pip', 'pytz', 'requests', 'setuptools', 'ruamel.appconfig', 'ruamel.std.argparse', 'six',
+              'urllib3'],
     url='',
     license='',
     author='princegupta',

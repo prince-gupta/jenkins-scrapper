@@ -1,7 +1,7 @@
 core:
   refresh_rate : 5
   job: python-practice
-  enable_gpio: True
+  enable_gpio: False
 
 jenkins:
   url : http://localhost:8080
