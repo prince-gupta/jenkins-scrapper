@@ -1,5 +1,6 @@
 core:
   refresh_rate : 5
+  job: python_practice
 
 jenkins:
   url : http://localhost:8080
