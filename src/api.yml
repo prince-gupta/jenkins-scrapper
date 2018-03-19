@@ -1,0 +1,16 @@
+core:
+  refresh_rate : 5
+
+jenkins:
+  url : http://localhost:8080
+  username : admin
+  api:
+    token : 32516612a5f6da237e2abb2ae570e987
+
+gpio:
+  pin:
+    led:
+      success: 17
+      failed: 17
+      building: 17
+    buzzer: 17

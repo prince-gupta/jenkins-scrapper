@@ -8,9 +8,10 @@ class LEDStatus:
     building_LED: LED
 
     def __init__(self):
-        LEDStatus.success_LED = PropertyUtil().get_int("rapberry_gpio_config", "gpio.job.success.led.pin")
-        LEDStatus.fail_LED = PropertyUtil().get_int("rapberry_gpio_config", "gpio.job.failed.led.pin")
-        LEDStatus.building_LED = PropertyUtil().get_int("rapberry_gpio_config", "gpio.job.building.led.pin")
+        led_config = (PropertyUtil().get_int("gpio", "pin"))['led']
+        LEDStatus.success_LED = led_config['success']
+        LEDStatus.fail_LED = led_config['failed']
+        LEDStatus.building_LED = led_config['building']
 
     def mark_fail(self):
         LEDStatus.failed_LED.on()
